@@ -1,8 +1,9 @@
 //function for viewing product details
 const detailsContainer = document.getElementById('detailsContainer');
-const prod = document.getElementsByClassName('product-list');
+const prod = document.getElementById('productList');
     // Fetch product details from the API
     async function viewDetails(productId) {
+         prod.style.display="none";
     try{
     let response = await fetch(`https://dummyjson.com/products/${productId}`);
     let product = await response.json();
@@ -41,6 +42,7 @@ const prod = document.getElementsByClassName('product-list');
 
         //close view details
         function closeDetails() {
+            prod.style.display="flex";
             detailsContainer.innerHTML = '';
         }
         

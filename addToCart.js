@@ -2,7 +2,7 @@
     const user = JSON.parse(localStorage.getItem("user"));
       if (!user) {
     alert("No user found. Please sign in first.");
-    window.location.href = "signin.html";
+    window.location.href = "signIn.html";
   } 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -46,8 +46,8 @@ function viewCart() {
     cart.forEach(item => {
         const itemElement = document.createElement('div');
        let totalPrice =  item.price * item.quantity;
+       
         itemElement.innerHTML = `
-       <button onclick="localStorage.removeItem('cart')">Clear all</button>
 
             <div style="border: 1px solid #ccc; padding: 10px; margin: 10px; display: flex; align-items: center;">
                 <img src="${item.thumbnail}" alt="${item.title}" style="width: 60px; height: 60px; margin-right: 10px;">
@@ -65,5 +65,6 @@ function viewCart() {
         `;
         cartItemsContainer.appendChild(itemElement);
     });
+    
 }
 viewCart();
