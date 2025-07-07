@@ -2,7 +2,7 @@
     const user = JSON.parse(localStorage.getItem("user"));
       if (!user) {
     alert("No user found. Please sign in first.");
-    window.location.href = "signin.html";
+    window.location.href = "signIn.html";
   } 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
