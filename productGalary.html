@@ -1,0 +1,68 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Galary</title>
+  </head>
+  <!-- the container for the search and header -->
+  <link rel="stylesheet" href="product.css" />
+  <link rel="stylesheet" href="mediaQueries.css" />
+  <link rel="stylesheet" href="navbar.css"/>
+  <link rel="stylesheet" href="viewDetails.css"/>
+  
+  
+  <body>
+  <!-- Navigation Bar-->
+  <div class="topbar">
+  <img src="img/image-removebg-preview.png" alt="">
+  <div class="SearchSortCategory">
+      <!-- the container for the search and heading -->
+      <div class="search">
+        <form action="Search.html" class="inputForm" id="form">
+          <input type="text" placeholder="search for a product" id="input" />
+          <button type="submit" id="this">Search</button>
+        </form>
+      </div>
+      <!-- <div class="filters"> -->
+        category:
+        <div class="filter" id="container">
+          <!-- filter category -->
+        </div>
+        short by:
+        <div id="sorting">
+          <!-- onchange removed onchange="getSelectedValue()" -->
+          <select id="mySelect">
+            <option value="price">Price(asc)</option>
+            <option value="title">Title (A-Z)</option>
+            <option value="rating">Rating(0-5)</option>
+          </select>
+        </div>
+      <!-- </div> -->
+  </div>
+
+  </div>
+  <div class="container">
+    <div class="sidebar">
+        <a href="index.html"><img src="img/home-icon.png" alt="Home Icon">Home</a>
+        <a href="productGalary.html"><img src="img/products.png" alt="Gallery Icon">Products</a>
+        <a href="contact"><img src="img/contact.png" alt="Contact Icon">Contact</a>
+        <a href="myCart.html"><img src="img/cart.png" alt="">Cart</a>
+        <a href="profilePage.html"><img src="img/user.png" alt="News Icon">Profile</a>
+      </div>
+  </div>
+  <!-- the main content of the page -->
+      <main>
+        <div id="detailsContainer">  </div>
+        <div class="product-list" id="productList"> </div>
+        <!-- the searched prod  -->
+            
+            
+      </main>
+
+    <script src="script.js"></script>
+    <script src="category-list.js"></script>
+    <script src="viewDetails.js"></script>
+    <script src="addToCart.js"></script>
+  </body>
+</html>
+

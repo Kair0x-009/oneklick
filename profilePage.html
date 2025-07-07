@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glassmorphism Profile Card</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="profilePage.css">
+  <style>
+   
+  </style>
+  <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <div class="topbar">
+      <img src="img/image-removebg-preview.png" alt="Logo">
+   </div>
+   <div class="container">
+    <div class="sidebar">
+        <a href="index.html"><img src="img/home-icon.png" alt="Home Icon">Home</a>
+        <a href="productGalary.html"><img src="img/products.png" alt="Gallery Icon">Products</a>
+        <a href="contact"><img src="img/contact.png" alt="Contact Icon">Contact</a>
+        <a href="myCart.html"><img src="img/cart.png" alt=""></a>
+        <a href="profilePage.html"><img src="img/user.png" alt="News Icon">Profile</a>
+      </div>
+    </div>
+    <main>
+        <div class="card">
+        </div>
+    </main>
+    
+  <script>
+    let card = document.querySelector('.card');
+    function visitProfile(){
+      const user = JSON.parse(localStorage.getItem("user"));
+      if (!user) {
+    alert("No user found. Please sign in first.");
+    window.location.href = "signin.html";
+  } 
+        card.innerHTML=" ";
+         const div = document.createElement("div");
+    div.className = "content";
+    div.innerHTML = `
+   <img src="" alt="Sarah Johnson" class="profile-img" />
+      <h2> ${user.firstName} ${user.lastName} </h2>
+      <h4>${user.username}</h4>
+      <h4>
+        Age: ${user.age}<br>
+        Gender: ${user.gender}<br>
+        Gmail: ${user.email}</h4>
+      <p>Creating beautiful digital experiences</p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href=""><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-snapchat"></i></a>
+      </div>
+      <button class="contact-btn" onclick="logout()">Log Out</button>
+    `;
+    card.appendChild(div);
+    }
+    visitProfile();
+
+    function logout(){
+      localStorage.removeItem("user");
+    window.location.href = "signin.html";
+    }
+   
+  </script>
+</body>
+</html>

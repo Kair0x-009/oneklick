@@ -1,0 +1,105 @@
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+      border: 3px solid rgb(40, 40, 45);
+      box-shadow: 0 10px 10px rgba(0, 255, 255, 0.1);
+      background-color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+      align-items: center;
+    }
+    nav ul li a {
+      text-decoration: none;
+      padding: 5px;
+      border-radius: 8px;
+      color: rgb(89, 54, 176);
+    }
+    nav ul li a:hover {
+      background-color: #ff6347;
+      color: black;
+      transition: 0.5s ease;
+    }
+    .cart {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .cart img {
+      height: 25px;
+      width: 25px;
+    }
+
+
+
+#home {
+      background-color:rgb(67, 153, 224);
+      text-align: center;
+      height: 50vh;
+      justify-content: center;
+      align-content: center;
+      padding: 16px;
+
+    }
+
+    #home::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('your-background-image.jpg') center/cover no-repeat;
+      filter: blur(12px);
+      z-index: -1;
+      opacity: 0.4;
+    }
+
+    #home h1 {
+      font-size: 2.5rem;
+    }
+
+    #home a{
+      border: 2px solid white;
+      border-radius: 40%;
+      text-align: center;
+      padding: 5px;
+      text-decoration: none;
+      background-color: aliceblue;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      background-color: cyan;
+      color: #000;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      transition: 0.3s ease;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background-color: #ff6347;
+    }
+
+
+header {
+  background: #333;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
