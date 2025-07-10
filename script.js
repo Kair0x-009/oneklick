@@ -66,6 +66,7 @@ let filterContainer = document.getElementsByClassName("filter");
 const selectElement = document.createElement("select");
 let URL2 = "https://dummyjson.com/products/category-list";
 selectElement.id = "category";
+selectElement.className="filter" ;
 async function getCategoryList() {
   let response = await fetch(URL2);
   console.log(response);

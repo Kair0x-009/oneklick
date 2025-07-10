@@ -37,14 +37,16 @@ async function validate(e) {
         }
 
         console.log(data); // Token, user info
+
         alert('Sign In successful for ' + signinusername);
-        window.location.href = "profilePage.html";// Allow form submission or redirect
+
+        // window.location.href = "index.html";
     } catch (error) {
         console.error('Error:', error);
         alert('An error occurred. Please try again.');
         return false;
     }
-    // window.location.href = "profilePage.html";
+    
 }
 
   let signupForm = document.getElementById('SignUpForm');

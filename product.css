@@ -16,10 +16,10 @@
 background:linear-gradient(to top right, #37167d 0%, #1890e0 100%); 
   border: 1px solid #ccc;
   padding: 15px;
-  min-width: 120px;
-  max-width: 200px;
-  max-height: auto;
-  min-height: auto;
+  /* min-width: 120px; */
+  width: 200px;
+  /* max-height: auto; */
+  /* min-height: auto; */
   text-align: left;
   font-size: 14px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -69,13 +69,66 @@ footer {
   padding: 1rem;
   font-size: 1.2rem;
 }
+ .filter{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    flex-wrap: wrap;
+     align-items: center;
+    
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+  gap: 5px;
+ }
 
 .SearchSortCategory {
   display: flex;
+   flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
   justify-content: center;
   align-items: center;
+  padding: 0px;
   flex-direction: row;
 }
+.inputForm input[type="text"] {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px; 
+  font-size: 12px;
+  width: 150px;
+  margin-top: 5px;
+}
 
+.inputForm button {
+  padding: 5px 10px;
+  background-color: rgb(118, 177, 8);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.inputForm button:hover {
+  background-color: orangered;
+}
+#container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+#sorting select, #container select  {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  background-color: white;
+}
+
+.logo{
+  position: fixed;
+}
 
 

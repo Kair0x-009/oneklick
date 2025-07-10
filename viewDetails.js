@@ -43,6 +43,9 @@ const prod = document.getElementById('productList');
         //close view details
         function closeDetails() {
             prod.style.display="flex";
+            // prod.style.gridTemplateColumns = repeat(5,auto);
+            // grid-template-columns : repeat(6,auto);
+            // prod.classList.add
             detailsContainer.innerHTML = '';
         }
         

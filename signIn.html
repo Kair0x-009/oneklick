@@ -9,22 +9,24 @@
 <body>
    <div class="topbar">
   <img src="img/image-removebg-preview.png" alt="">
-
   </div>
   <div class="container">
     <div class="sidebar">
         <a href="index.html"><img src="img/home-icon.png" alt="Home Icon">Home</a>
         <a href="productGalary.html"><img src="img/products.png" alt="Gallery Icon">Products</a>
         <a href="contact"><img src="img/contact.png" alt="Contact Icon">Contact</a>
-        <a href="myCart.html"><img src="img/cart.png" alt=""></a>
+        <a href="myCart.html"><img src="img/cart.png" alt="">Cart</a>
         <a href="profilePage.html"><img src="img/user.png" alt="News Icon">Profile</a>
       </div>
+      <footer>
+        &copy; BLANK_SPACE&trade; <br> All Rights Reserved
+      </footer>
   </div>
   <main>
         <div class="outerContainer">
         <div class="innerContainer">
          <h1>Sign In</h1>
-         <form id="signinForm" method="POST" onsubmit="validate(e)" action="profilePage.html" >
+         <form id="signinForm" action="index.html" method="post" onsubmit="validate(e)">
                 <label for="Username">Username:</label>
                 <input type="text" placeholder="Enter Your Username" name="username">
                 <label for="password">Password:</label>

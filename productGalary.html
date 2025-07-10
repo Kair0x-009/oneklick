@@ -9,38 +9,42 @@
   <link rel="stylesheet" href="mediaQueries.css" />
   <link rel="stylesheet" href="navbar.css"/>
   <link rel="stylesheet" href="viewDetails.css"/>
+  <link rel="stylesheet" href="mediaQueries.css"/>
   
   
   <body>
   <!-- Navigation Bar-->
   <div class="topbar">
-  <img src="img/image-removebg-preview.png" alt="">
-  <div class="SearchSortCategory">
-      <!-- the container for the search and heading -->
-      <div class="search">
-        <form action="Search.html" class="inputForm" id="form">
-          <input type="text" placeholder="search for a product" id="input" />
-          <button type="submit" id="this">Search</button>
-        </form>
-      </div>
-      <!-- <div class="filters"> -->
-        category:
-        <div class="filter" id="container">
-          <!-- filter category -->
-        </div>
-        short by:
-        <div id="sorting">
-          <!-- onchange removed onchange="getSelectedValue()" -->
-          <select id="mySelect">
-            <option value="price">Price(asc)</option>
-            <option value="title">Title (A-Z)</option>
-            <option value="rating">Rating(0-5)</option>
-          </select>
-        </div>
-      <!-- </div> -->
-  </div>
+  <!-- <div class="logo">
+    <img src="img/image-removebg-preview.png" alt="Logo" />
+  </div> -->
 
+  <div class="SearchSortCategory">
+    <div class="search">
+      <form action="Search.html" class="inputForm" id="form">
+        <input type="text" placeholder="Search for a product" id="input" />
+        <button type="submit" id="this">Search</button>
+      </form>
+    </div>
+
+    <div class="filter">
+      <h3>Category:</h3>
+      <div id="container">
+        <!-- JavaScript will populate filter categories here -->
+      </div>
+
+      <h3>Sort By:</h3>
+      <div id="sorting">
+        <select id="mySelect">
+          <option value="price">Price (asc)</option>
+          <option value="title">Title (A-Z)</option>
+          <option value="rating">Rating (0-5)</option>
+        </select>
+      </div>
+    </div>
   </div>
+</div>
+
   <div class="container">
     <div class="sidebar">
         <a href="index.html"><img src="img/home-icon.png" alt="Home Icon">Home</a>
@@ -49,6 +53,9 @@
         <a href="myCart.html"><img src="img/cart.png" alt="">Cart</a>
         <a href="profilePage.html"><img src="img/user.png" alt="News Icon">Profile</a>
       </div>
+      <footer>
+        &copy; BLANK_SPACE&trade; <br> All Rights Reserved
+      </footer>
   </div>
   <main>
     <div id="detailsContainer"></div>
