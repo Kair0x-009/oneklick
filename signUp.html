@@ -1,47 +1,66 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Account</title>
-</head>
-<link rel="stylesheet" href="navbar.css">
- <link rel="stylesheet" href="profilePage.css">
-<body>
-   <div class="topbar">
-  <img src="img/image-removebg-preview.png" alt="">
-
-  </div>
-  <div class="container">
-    <div class="sidebar">
-        <a href="index.html"><img src="img/home-icon.png" alt="Home Icon">Home</a>
-        <a href="productGalary.html"><img src="img/products.png" alt="Gallery Icon">Products</a>
-        <a href="contact"><img src="img/contact.png" alt="Contact Icon">Contact</a>
-        <a href="myCart.html"><img src="img/cart.png" alt="">Cart</a>
-        <a href="profilePage.html"><img src="img/user.png" alt="News Icon">Profile</a>
+  </head>
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="profilePage.css" />
+  <body>
+    <div class="topbar">
+      <img src="img/image-removebg-preview.png" alt="" />
+    </div>
+    <div class="container">
+      <div class="sidebar">
+        <a href="index.html"
+          ><img src="img/home-icon.png" alt="Home Icon" />Home</a
+        >
+        <a href="productGalary.html"
+          ><img src="img/products.png" alt="Gallery Icon" />Products</a
+        >
+        <a href="contact.html"
+          ><img src="img/contact.png" alt="Contact Icon" />Contact</a
+        >
+        <a href="myCart.html"><img src="img/cart.png" alt="" />Cart</a>
+        <a href="profilePage.html"
+          ><img src="img/user.png" alt="News Icon" />Profile</a
+        >
+        <a href="aboutUs.html"><img src="img/about-us.png" alt="" />About Us</a>
       </div>
       <footer>
-        &copy; BLANK_SPACE&trade; <br> All Rights Reserved
+        &copy; BLANK_SPACE&trade; <br />
+        All Rights Reserved
       </footer>
-
-  </div>
-  <main>
-        <div class="outerContainer">
+    </div>
+    <main>
+      <div class="outerContainer">
         <div class="innerContainer">
-        <h1>Sign Up</h1>
-        <form id="SignUpForm" method="POST" action="index.html" onsubmit="SignUpValidate()">
-            <input type="text" id="FirstName" placeholder="First Name">
-            <input type="text" id="LastName" placeholder="Last Name">
-            <input type="text" id="Username" placeholder="Username">
-            <input type="number" id="Age" placeholder="Age" min="16" max="100">
-            <input type="email" id="Email" placeholder="Email">
-            <input type="password" id="Password" placeholder="Password">
+          <h1>Sign Up</h1>
+          <form
+            id="SignUpForm"
+            method="POST"
+            action="index.html"
+            onsubmit="SignUpValidate()"
+          >
+            <input type="text" id="FirstName" placeholder="First Name" />
+            <input type="text" id="LastName" placeholder="Last Name" />
+            <input type="text" id="Username" placeholder="Username" />
+            <input
+              type="number"
+              id="Age"
+              placeholder="Age"
+              min="16"
+              max="100"
+            />
+            <input type="email" id="Email" placeholder="Email" />
+            <input type="password" id="Password" placeholder="Password" />
             <button type="submit">Sign Up</button>
-        </form>
-        
-        <p>Already have an account? <a href="signIn.html">Sign In</a></p>
-        </div>  
-        </div>  
-  </main> 
-  <script src="formValidation.js"></script>   
-</body>
+          </form>
+
+          <p>Already have an account? <a href="signIn.html">Sign In</a></p>
+        </div>
+      </div>
+    </main>
+    <script src="formValidation.js"></script>
+  </body>
 </html>

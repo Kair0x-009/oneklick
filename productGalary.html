@@ -7,64 +7,72 @@
   <!-- the container for the search and header -->
   <link rel="stylesheet" href="product.css" />
   <link rel="stylesheet" href="mediaQueries.css" />
-  <link rel="stylesheet" href="navbar.css"/>
-  <link rel="stylesheet" href="viewDetails.css"/>
-  <link rel="stylesheet" href="mediaQueries.css"/>
-  
-  
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="viewDetails.css" />
+  <link rel="stylesheet" href="mediaQueries.css" />
+
   <body>
-  <!-- Navigation Bar-->
-  <div class="topbar">
-  <!-- <div class="logo">
+    <!-- Navigation Bar-->
+    <div class="topbar">
+      <!-- <div class="logo">
     <img src="img/image-removebg-preview.png" alt="Logo" />
   </div> -->
 
-  <div class="SearchSortCategory">
-    <div class="search">
-      <form action="Search.html" class="inputForm" id="form">
-        <input type="text" placeholder="Search for a product" id="input" />
-        <button type="submit" id="this">Search</button>
-      </form>
+      <div class="SearchSortCategory">
+        <div class="search">
+          <form action="Search.html" class="inputForm" id="form">
+            <input type="text" placeholder="Search for a product" id="input" />
+            <button type="submit" id="this">Search</button>
+          </form>
+        </div>
+
+        <div class="filter">
+          <h3>Category:</h3>
+          <div id="container">
+            <!-- JavaScript will populate filter categories here -->
+          </div>
+
+          <h3>Sort By:</h3>
+          <div id="sorting">
+            <select id="mySelect">
+              <option value="price">Price (asc)</option>
+              <option value="title">Title (A-Z)</option>
+              <option value="rating">Rating (0-5)</option>
+            </select>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="filter">
-      <h3>Category:</h3>
-      <div id="container">
-        <!-- JavaScript will populate filter categories here -->
-      </div>
-
-      <h3>Sort By:</h3>
-      <div id="sorting">
-        <select id="mySelect">
-          <option value="price">Price (asc)</option>
-          <option value="title">Title (A-Z)</option>
-          <option value="rating">Rating (0-5)</option>
-        </select>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <div class="container">
-    <div class="sidebar">
-        <a href="index.html"><img src="img/home-icon.png" alt="Home Icon">Home</a>
-        <a href="productGalary.html"><img src="img/products.png" alt="Gallery Icon">Products</a>
-        <a href="contact"><img src="img/contact.png" alt="Contact Icon">Contact</a>
-        <a href="myCart.html"><img src="img/cart.png" alt="">Cart</a>
-        <a href="profilePage.html"><img src="img/user.png" alt="News Icon">Profile</a>
+    <div class="container">
+      <div class="sidebar">
+        <a href="index.html"
+          ><img src="img/home-icon.png" alt="Home Icon" />Home</a
+        >
+        <a href="productGalary.html"
+          ><img src="img/products.png" alt="Gallery Icon" />Products</a
+        >
+        <a href="contact.html"
+          ><img src="img/contact.png" alt="Contact Icon" />Contact</a
+        >
+        <a href="myCart.html"><img src="img/cart.png" alt="" />Cart</a>
+        <a href="profilePage.html"
+          ><img src="img/user.png" alt="News Icon" />Profile</a
+        >
+        <a href="aboutUs.html"><img src="img/about-us.png" alt="" />About Us</a>
       </div>
       <footer>
-        &copy; BLANK_SPACE&trade; <br> All Rights Reserved
+        &copy; BLANK_SPACE&trade; <br />
+        All Rights Reserved
       </footer>
-  </div>
-  <main>
-    <div id="detailsContainer"></div>
-    <div class="product-list" id="productList"></div>     
-  </main>
+    </div>
+    <main>
+      <div id="detailsContainer"></div>
+      <div class="product-list" id="productList"></div>
+    </main>
     <script src="script.js"></script>
     <script src="category-list.js"></script>
     <script src="viewDetails.js"></script>
     <script src="addToCart.js"></script>
   </body>
 </html>
-

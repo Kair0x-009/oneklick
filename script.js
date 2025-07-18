@@ -7,24 +7,34 @@ async function getData() {
   products = await response.json();
   displayProducts(products);
   // console.log(products);
-}getData();
+}
+getData();
 
 function displayProducts(products) {
   // console.log(products)
-   container.innerHTML = "";
+  container.innerHTML = "";
   products.products.forEach((product, index) => {
+    const discountAmount = product.price * (product.discountPercentage / 100);
+    const discountedPrice = product.price - discountAmount;
     const div = document.createElement("div");
     div.className = "product";
     div.innerHTML = `
+    <div onclick="viewDetails(${product.id})">
       <img src="${product.images[0]}" />
       <h3>${product.title}</h3>
-      <p>$ ${product.price.toFixed(2)}</p>
+       <div class="product-price">
+          <span class="current-price">$${discountedPrice.toFixed(2)}</span>
+          <span class="original-price">$${product.price.toFixed(2)}</span>
+        </div>
         <p>Rating: ${product.rating}</p>
         <p>Stock: ${product.stock}</p>
         <p>Discount: ${product.discountPercentage}%</p>
         <div class="btn">
+       </div>
       <button onclick="addToCart(${product.id})">Add to Cart</button>
-      <button id="viewDetailsButton" onclick="viewDetails(${product.id})">View Details</button>
+      <button id="viewDetailsButton" onclick="viewDetails(${
+        product.id
+      })">View Details</button>
         </div>
     `;
     container.appendChild(div);
@@ -32,41 +42,37 @@ function displayProducts(products) {
   });
 }
 
-  const input = document.getElementById("input");
-  const btn = document.getElementById("this");
-  // const search = input.value.trim();
-   btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    const search = input.value.trim();
-    if (search) {
-      getItems(search);
-    }
-  });
- 
-  
-  async function getItems(search) {
-    try {
-      let response = await fetch(`https://dummyjson.com/products/search?q=${search}`);
-      products = await response.json();
-      console.log(products);
-      displayProducts(products); // Pass the array directly
-    }catch (error) {
-      console.log("Error fetching products:");
-      container.innerHTML = `<p>Failed to fetch products. Try again later.</p>`;
-    }
+const input = document.getElementById("input");
+const btn = document.getElementById("this");
+// const search = input.value.trim();
+btn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const search = input.value.trim();
+  if (search) {
+    getItems(search);
   }
+});
 
-
-
-
-
+async function getItems(search) {
+  try {
+    let response = await fetch(
+      `https://dummyjson.com/products/search?q=${search}`
+    );
+    products = await response.json();
+    console.log(products);
+    displayProducts(products); // Pass the array directly
+  } catch (error) {
+    console.log("Error fetching products:");
+    container.innerHTML = `<p>Failed to fetch products. Try again later.</p>`;
+  }
+}
 
 // logic for searching data in catorgoery
 let filterContainer = document.getElementsByClassName("filter");
 const selectElement = document.createElement("select");
 let URL2 = "https://dummyjson.com/products/category-list";
 selectElement.id = "category";
-selectElement.className="filter" ;
+selectElement.className = "filter";
 async function getCategoryList() {
   let response = await fetch(URL2);
   console.log(response);
@@ -98,11 +104,6 @@ function displayCategory(categoryList) {
 document.getElementById("container").appendChild(selectElement);
 getCategoryList();
 
-
-
-
-
-
 // logic for sorting data in products using bubble sort
 let sortBy = document.getElementById("mySelect");
 let sortByValue = sortBy.value;
@@ -117,7 +118,7 @@ sortBy.addEventListener("change", () => {
   if (products.products) {
     //bubble sort
     for (let i = 0; i < products.products.length - 1; i++) {
-      for(let j=i+1; j < products.products.length; j++) {
+      for (let j = i + 1; j < products.products.length; j++) {
         if (sortByValue === "price") {
           if (products.products[i].price > products.products[j].price) {
             let temp = products.products[i];
@@ -125,7 +126,11 @@ sortBy.addEventListener("change", () => {
             products.products[j] = temp;
           }
         } else if (sortByValue === "title") {
-          if (products.products[i].title.localeCompare(products.products[j].title) > 0) {
+          if (
+            products.products[i].title.localeCompare(
+              products.products[j].title
+            ) > 0
+          ) {
             let temp = products.products[i];
             products.products[i] = products.products[j];
             products.products[j] = temp;
@@ -139,6 +144,6 @@ sortBy.addEventListener("change", () => {
         }
       }
     }
-  displayProducts(products);
+    displayProducts(products);
   }
 });

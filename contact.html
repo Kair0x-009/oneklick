@@ -1,166 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact & Newsletter</title>
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"> -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="navbar.css">
-  <link rel="stylesheet" href="mediaQueries.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact & Newsletter</title>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="mediaQueries.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    /* body {
+      /* body {
       font-family: 'Poppins', sans-serif;
       background: #f5f6fa;
       color: #2f3640;
       line-height: 1.6;
     } */
 
-   .contact-container {
-      max-width: 1200px;
-      margin: auto;
-      margin-top: 50px;
-      padding: 50px 20px;
-      display: flex;
-      justify-content: space-between;
-      gap: 40px;
-    }
+      .contact-container {
+        max-width: 1200px;
+        margin: auto;
+        margin-top: 50px;
+        padding: 50px 20px;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+      }
 
-    .contact-form, .newsletter ,.contact-info {
-      flex: 1;
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
+      .contact-form,
+      .newsletter,
+      .contact-info {
+        flex: 1;
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
 
-    h2 {
-      margin-bottom: 20px;
-      font-size: 28px;
-      color: #273c75;
-    }
+      h2 {
+        margin-bottom: 20px;
+        font-size: 28px;
+        color: #273c75;
+      }
 
-    label {
-      display: block;
-      margin: 15px 0 5px;
-      font-weight: 500;
-    }
+      label {
+        display: block;
+        margin: 15px 0 5px;
+        font-weight: 500;
+      }
 
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 16px;
-      resize: none;
-    }
+      input,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+        resize: none;
+      }
 
-    button {
-      margin-top: 20px;
-      padding: 12px 20px;
-      background-color: #40739e;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
+      button {
+        margin-top: 20px;
+        padding: 12px 20px;
+        background-color: #40739e;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
 
-    button:hover {
-      background-color: #273c75;
-    }
+      button:hover {
+        background-color: #273c75;
+      }
 
-    .newsletter p {
-      margin-bottom: 15px;
-    }
+      .newsletter p {
+        margin-bottom: 15px;
+      }
 
-    iframe{
+      iframe {
         height: 200px;
         width: auto;
-    }
-   
-  </style>
-</head>
-<body>
-        <div class="topbar">
-      <img src="img/image-removebg-preview.png" alt="Logo">
-   </div>
-   <div class="container">
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <img src="img/image-removebg-preview.png" alt="Logo" />
+    </div>
+    <div class="container">
       <div class="sidebar">
-        <a href="index.html"><img src="img/home-icon.png" alt="Home Icon">Home</a>
-        <a href="productGalary.html"><img src="img/products.png" alt="Gallery Icon">Products</a>
-        <a href="contact.html"><img src="img/contact.png" alt="Contact Icon">Contact</a>
-        <a href="myCart.html"><img src="img/cart.png" alt="">Cart</a>
-        <a href="profilePage.html"><img src="img/user.png" alt="News Icon">Profile</a>
-        <a href="aboutUs.html"><img src="" alt="">About Us</a>
+        <a href="index.html"
+          ><img src="img/home-icon.png" alt="Home Icon" />Home</a
+        >
+        <a href="productGalary.html"
+          ><img src="img/products.png" alt="Gallery Icon" />Products</a
+        >
+        <a href="contact.html"
+          ><img src="img/contact.png" alt="Contact Icon" />Contact</a
+        >
+        <a href="myCart.html"><img src="img/cart.png" alt="" />Cart</a>
+        <a href="profilePage.html"
+          ><img src="img/user.png" alt="News Icon" />Profile</a
+        >
+        <a href="aboutUs.html"><img src="img/about-us.png" alt="" />About Us</a>
       </div>
       <footer>
-        &copy; BLANK_SPACE&trade; <br> All Rights Reserved
+        &copy; BLANK_SPACE&trade; <br />
+        All Rights Reserved
       </footer>
-      </div>
-
-  <section class="contact-container">
-     <div class="contact-info">
-      <h2>Let's Talk</h2>
-      <p>We're here to answer any questions you might have. Reach out and let's start a conversation!</p>
-      <div class="info-item">
-        <span>Email:</span>
-       blank.space@gmail.com
-      </div>
-      <div class="info-item">
-        <span>Phone:</span>
-        +064 123456
-      </div>
-      <div class="info-item">
-        <span>Location:</span>
-       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6127.883082972037!2d84.62440058164394!3d28.00233669150372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399522b65559e779%3A0x88c571dd36753f47!2sGorkha%20Museum!5e1!3m2!1sen!2snp!4v1752144352799!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-    <!-- Contact Form -->
-    <div class="contact-form">
-      <h2>Contact Us</h2>
-      <form action="https://formspree.io/f/mpwqwjen" method="POST">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required/>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required/>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
     </div>
 
-    <!-- Newsletter Subscription -->
-    <div class="newsletter">
-      <h2>Subscribe to Newsletter</h2>
-      <p>Get the latest updates, tips, and resources delivered straight to your inbox.</p>
-      <form action="https://formspree.io/f/yourNewsletterID" method="POST">
-        <label>Your Name</label>
-        <input type="text" required/>
+    <section class="contact-container">
+      <div class="contact-info">
+        <h2>Let's Talk</h2>
+        <p>
+          We're here to answer any questions you might have. Reach out and let's
+          start a conversation!
+        </p>
+        <div class="info-item">
+          <span>Email:</span>
+          blank.space@gmail.com
+        </div>
+        <div class="info-item">
+          <span>Phone:</span>
+          +064 123456
+        </div>
+        <div class="info-item">
+          <span>Location:</span>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6127.883082972037!2d84.62440058164394!3d28.00233669150372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399522b65559e779%3A0x88c571dd36753f47!2sGorkha%20Museum!5e1!3m2!1sen!2snp!4v1752144352799!5m2!1sen!2snp"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/mpwqwjen" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
 
-        <label for="subscriber-email">Your Email</label>
-        <input type="email" name="Email" id="">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
 
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
 
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-  </section>
-  <div class="footerContent">
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Newsletter Subscription -->
+      <div class="newsletter">
+        <h2>Subscribe to Newsletter</h2>
+        <p>
+          Get the latest updates, tips, and resources delivered straight to your
+          inbox.
+        </p>
+        <form action="https://formspree.io/f/yourNewsletterID" method="POST">
+          <label>Your Name</label>
+          <input type="text" required />
+
+          <label for="subscriber-email">Your Email</label>
+          <input type="email" name="Email" id="" />
+
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+    <div class="footerContent">
       <div>
- <img src="img/image-removebg-preview.png" alt="logo">
+        <img src="img/image-removebg-preview.png" alt="logo" />
       </div>
-     
+
       <div class="quick-links">
         <a href="index.html">Home</a>
         <a href="">About Us</a>
@@ -168,7 +195,7 @@
         <a href="">Contacts</a>
       </div>
       <div class="social-media-links">
-         <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-github"></i></a>
         <a href="#"><i class="fab fa-tiktok"></i></a>
         <a href=""><i class="fab fa-facebook"></i></a>
@@ -176,6 +203,5 @@
         <a href=""><i class="fab fa-snapchat"></i></a>
       </div>
     </div>
-
-</body>
+  </body>
 </html>

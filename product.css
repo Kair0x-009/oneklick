@@ -1,19 +1,37 @@
 .product-list, 
 #detailsContainer,
 /* .search-list, */
-.sortItem  {
+.sortItem {
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
   padding: 0px 20px;
-  margin: 50px 0px 50px 50px;
-   gap: 3px;
+  /* margin: 50px 0px 50px 50px; */
+  gap: 3px;
   color: white;
-  
 }
 
- .product  /*,.product-Details*/{ 
-background:linear-gradient(to top right, #37167d 0%, #1890e0 100%); 
+.product-price {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+         .current-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .original-price {
+            font-size: 0.9rem;
+            color: var(--gray);
+            text-decoration: line-through;
+        }
+
+.product  /*,.product-Details*/ {
+  background: linear-gradient(to top right, #37167d 0%, #1890e0 100%);
   border: 1px solid #ccc;
   padding: 15px;
   /* min-width: 120px; */
@@ -69,24 +87,24 @@ footer {
   padding: 1rem;
   font-size: 1.2rem;
 }
- .filter{
-    display: flex;
-    flex-direction: row;
-    width: auto;
-    flex-wrap: wrap;
-     align-items: center;
-    
+.filter {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  flex-wrap: wrap;
+  align-items: center;
+
   justify-content: center;
   align-items: center;
   padding-right: 20px;
   gap: 5px;
- }
+}
 
 .SearchSortCategory {
   display: flex;
-   flex-wrap: wrap;
-    align-items: center;
-    gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
   justify-content: center;
   align-items: center;
   padding: 0px;
@@ -95,7 +113,7 @@ footer {
 .inputForm input[type="text"] {
   padding: 10px 12px;
   border: 1px solid #ccc;
-  border-radius: 8px; 
+  border-radius: 8px;
   font-size: 12px;
   width: 150px;
   margin-top: 5px;
@@ -119,7 +137,8 @@ footer {
   gap: 10px;
   flex-wrap: wrap;
 }
-#sorting select, #container select  {
+#sorting select,
+#container select {
   padding: 8px 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -127,8 +146,6 @@ footer {
   background-color: white;
 }
 
-.logo{
+.logo {
   position: fixed;
 }
-
-

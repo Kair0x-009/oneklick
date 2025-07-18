@@ -1,118 +1,124 @@
 body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      box-sizing: border-box;
-      background:linear-gradient(to top right, #ffffff 0%, #ffffff 100%); 
-    }
-    body, button, a ,input, select{
+  margin: 0%;
+  margin-top: 50px;
+  margin-left: 50px;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  background: linear-gradient(to top right, #ffffff 0%, #ffffff 100%);
+}
+body,
+button,
+a,
+input,
+select {
   cursor: url("img/PrithviNarayanShah.png"), auto;
 }
 
-   
+.container {
+  width: 50px;
+  height: calc(100vh - 50px);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 23px 9px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  box-sizing: border-box;
+  color: #000000;
+  left: 0;
+  overflow: hidden;
+  border-radius: 0px;
+  transition: width 0.5s ease-in-out;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    .container {
-      width: 50px;
-      height: calc(100vh - 50px);
-      background-color: #1877f2;
-      padding: 10px;
-      box-sizing: border-box;
-      color: #fff;
-      left: 0;
-      /* margin-top: 50px; */
-      overflow: hidden;
-      border-radius: 0px;
-      transition: width 0.5s ease-in-out;
-      position: fixed;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      /* position: absolute; */
-    }
 
-    .container:hover {
-      width: 200px;
-    }
+  /* position: absolute; */
+}
 
-    .sidebar a {
-      display: flex;
-      align-items: center;
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 0;
-      transition: padding-left 0.3s ease;
-    }
+.container:hover {
+  width: 200px;
+}
 
-    .sidebar a:hover {
-      padding-left: 10px;
-      background-color: rgba(255, 255, 255, 0.2);
-    }
+.sidebar a {
+  display: flex;
+  align-items: center;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 0;
+  width: 170px;
+  transition: padding-left 0.3s ease;
+}
 
-    .sidebar img {
-      height: 20px;
-      width: 20px;
-      margin-right: 25px;
-    }
-    
+.sidebar a:hover {
+  padding-left: 10px;
+  background-color: rgba(255, 136, 0, 0.2);
+}
 
-    .topbar {
-      background-color: #1877f2;
-      padding: 0px;
-      color: #180a0a;
-      text-align: center;
-      position: fixed;
-      width: 100%;
-      height: 50px;
-      /* left: 50px; */
-      top: 0;
-      z-index: 1;
-      flex-wrap: wrap;
-      /* display: flex;
-      align-items: center;
-      justify-content: end; */
-    }
+.sidebar img {
+  height: 20px;
+  width: 20px;
+  margin-right: 25px;
+}
 
-    .topbar img {
-      height: 75px;
-      width: 75px;
-      border-radius: 50%;
-      margin-top: -10px;
-    }
+.topbar {
+  background-color: rgb(255, 255, 255);
+  padding: 0px;
+  color: #180a0a;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  margin-left: -50px;
+  top: 0;
+  z-index: 1;
+  flex-wrap: wrap;
 
-    footer{
-      margin-left: 50px;
-      display: flex;
-      position: relative;
-      margin-bottom: 10px;
-      color: rgb(7, 1, 6);
-      text-align: center;
-      align-content: end;
+}
 
-    }
+.topbar img {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  margin-top: -10px;
+}
 
-    .container:hover footer{
-      margin-left: 0px;
-      transition: all 0s ease-in-out;
-      text-align: justify;
- 
-    }
+footer {
+  display: none;
+  width: 200px;
+  position: relative;
+  margin-bottom: 10px;
+  color: rgb(1, 2, 7);
+  text-align: center;
+  align-content: center;
+  padding: 0px;
+}
 
-    .footerContent{
-    margin-left: 50px;
-    display: flex;
-    justify-content: space-evenly;
-    background-color: rgb(242, 229, 229);
-    width: auto;
-    align-items: center;
-    padding-bottom: auto;
-  }
-  .footerContent img{
-    height: 75px;
-  }
+.container:hover footer {
+  display: flex;
+  background-color: #ffffff;
+  /* margin-left: 0px; */
+  transition: all 0s ease-in-out;
+  /* text-align: justify; */
+}
 
-   a{
-    text-decoration: none;
-    padding: 5px;
-    color: black;
-    border-radius: 15px;
-  }
+.footerContent {
+  /* margin-left: 50px; */
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(242, 229, 229);
+  width: auto;
+  align-items: center;
+  padding-bottom: auto;
+}
+.footerContent img {
+  height: 75px;
+}
+
+a {
+  width: auto;
+  text-decoration: none;
+  padding: 5px;
+  color: black;
+  border-radius: 15px;
+}
