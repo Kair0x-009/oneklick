@@ -41,6 +41,7 @@
     <main>
       <div class="card"></div>
     </main>
+<<<<<<< HEAD
 
     <script>
       let card = document.querySelector(".card");
@@ -53,6 +54,21 @@
         const div = document.createElement("div");
         div.className = "content";
         div.innerHTML = `
+=======
+    
+  <script>
+    let card = document.querySelector('.card');
+    function visitProfile(){
+      const user = JSON.parse(localStorage.getItem("user"));
+      if (!user) {
+    alert("No user found. Please sign in first.");
+    window.location.href = "signIn.html";
+  } 
+        card.innerHTML=" ";
+         const div = document.createElement("div");
+    div.className = "content";
+    div.innerHTML = `
+>>>>>>> d53a097212f8c0c916e043f6150d5ac6e971ef74
    <img src="" alt="Sarah Johnson" class="profile-img" />
       <h2> ${user.firstName} ${user.lastName} </h2>
       <h4>${user.username}</h4>
