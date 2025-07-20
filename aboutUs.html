@@ -4,117 +4,135 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - TrendNest</title>
+    <link rel="stylesheet" href="navbar.css">
     <style>
-      body {
-        margin: 0;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #ffffff;
-        color: #333;
-      }
+      /* About Us Page Styles - Classic CSS */
 
-      .about-us {
-        background-color: #f9f9f9;
-        padding: 60px 20px;
-      }
+/* Main Content Section */
+section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font: 18px;
+}
 
-      .about-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 1200px;
-        margin: auto;
-        gap: 40px;
-        flex-wrap: wrap;
-      }
+section div {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
 
-      .about-image {
-        flex: 1 1 45%;
-        text-align: center;
-      }
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff8800;
+}
 
-      .about-image img {
-        width: 100%;
-        max-width: 500px;
-        border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      }
+/* List Styles */
+ul {
+    padding-left: 20px;
+}
 
-      .about-text {
-        flex: 1 1 45%;
-      }
+li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+}
 
-      .about-text h2 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-        color: #222;
-      }
 
-      .about-text p {
-        font-size: 1.1rem;
-        line-height: 1.7;
-        color: #555;
-        margin-bottom: 20px;
-      }
-
-      @media (max-width: 768px) {
-        .about-container {
-          flex-direction: column;
-          text-align: center;
-          padding: 0 10px;
-        }
-
-        .about-text h2 {
-          font-size: 2rem;
-        }
-
-        .about-text p {
-          font-size: 1rem;
-        }
-
-        .about-image img {
-          max-width: 100%;
-          height: auto;
-        }
-      }
-    </style>
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    section {
+        margin-left: 0;
+        padding-top: 70px; /* Account for topbar */
+    }
+    
+    .footerContent div {
+        display: block;
+        margin-bottom: 15px;
+    }
+}
+     </style>
   </head>
   <body>
-    <section class="about-us">
-      <div class="about-container">
-        <div class="about-image">
-          <img src="img/image-removebg-preview.png" alt="About Our Store" />
-        </div>
-        <div class="about-text">
-          <h2>About Us</h2>
-          <p>
-            Welcome to <strong>TrendNest</strong>, your trusted partner in
-            modern shopping. We're not just an eCommerce store — we're a
-            community of creators, dreamers, and everyday shoppers brought
-            together by the love of quality and innovation.
-          </p>
-
-          <p>
-            Our journey began with a simple mission: to make premium products
-            accessible, stylish, and sustainable. Whether it’s fashion,
-            electronics, home essentials, or lifestyle accessories — we curate
-            every item with care, blending design with functionality.
-          </p>
-
-          <p>
-            At TrendNest, we believe in putting customers first. From fast
-            shipping and easy returns to 24/7 support, we’re committed to
-            delivering an exceptional shopping experience every step of the way.
-            Our team constantly explores trends, tests products, and listens to
-            your feedback to ensure we offer only what’s truly valuable.
-          </p>
-
-          <p>
-            Thank you for choosing TrendNest. We’re here to bring inspiration to
-            your doorstep, one click at a time. Let’s redefine online shopping —
-            together.
-          </p>
-        </div>
+     <div class="topbar">
+      <img src="img/image-removebg-preview.png" alt="Logo" />
+    </div>
+    <div class="container">
+      <div class="sidebar">
+        <a href="index.html"
+          ><img src="img/home-icon.png" alt="Home Icon" />Home</a
+        >
+        <a href="productGalary.html"
+          ><img src="img/products.png" alt="Gallery Icon" />Products</a
+        >
+        <a href="contact.html"
+          ><img src="img/contact.png" alt="Contact Icon" />Contact</a
+        >
+        <a href="myCart.html"><img src="img/cart.png" alt="" />Cart</a>
+        <a href="profilePage.html"
+          ><img src="img/user.png" alt="News Icon" />Profile</a
+        >
+        <a href="aboutUs.html"><img src="img/about-us.png" alt="" />About Us</a>
       </div>
+      <footer>
+        &copy; BLANK_SPACE&trade; <br />
+        All Rights Reserved
+      </footer>
+    </div>
+    <section>
+      <div>
+        <h2>Welcome to BLANK_SPACE – Where Quality Meets Convenience!</h2>
+        <p>
+          At BLANK_SPACE , we believe in making online shopping effortless, enjoyable, and accessible for everyone. Founded in [Year], our mission is to provide high-quality products, exceptional customer service, and a seamless shopping experience—all at the click of a button.
+        </p>
+      </div>
+      <div>
+        <h2>Our Story</h2>
+        <p>
+          What started as a small idea among friends has grown into a trusted eCommerce destination for thousands of customers. Frustrated by the lack of [specific problem your brand solves, e.g., "affordable yet stylish home decor" or "eco-friendly everyday essentials"], we set out to create a platform that offers [your unique value proposition]. Today, we take pride in curating a diverse selection of products that cater to your needs while keeping sustainability, affordability, and style in mind.
+        </p>
+      </div>
+      <div>
+        <h2>Why Choose Us?</h2>
+        <ul>
+          <li>Quality Products – Every item in our store is carefully selected to ensure durability, functionality, and style.</li>
+          <li> Customer First – Your satisfaction is our priority. Our friendly support team is always here to help.</li>
+          <li>Fast & Reliable Shipping – We partner with trusted logistics providers to get your orders to you quickly and safely.</li>
+          <li>Secure Shopping – Enjoy a 100% secure checkout process with multiple payment options.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Join Our Journey</h2>
+        <p>
+          We’re more than just a store—we’re a community of passionate shoppers and creators. Follow us on [Social Media Links] for updates, promotions, and behind-the-scenes content!
+        </p>
+      </div>
+      Have questions or feedback? We’d love to hear from you! [Contact Us Page Link]
+
+Thank you for choosing [Your Brand Name]—we’re thrilled to have you here!
     </section>
+<div class="footerContent">
+      <div>
+        <img src="img/image-removebg-preview.png" alt="logo" />
+      </div>
+
+      <div class="quick-links">
+        <a href="index.html">Home</a>
+        <a href="">About Us</a>
+        <a href="">Products</a>
+        <a href="">Contacts</a>
+      </div>
+      <div class="social-media-links">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href=""><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-snapchat"></i></a>
+      </div>
+    </div>
   </body>
 </html>

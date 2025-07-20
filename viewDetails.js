@@ -35,7 +35,9 @@ function Details(product) {
             Created At: ${product.meta.updatedAt}<br>
             Updated At: ${product.meta.createdAt}<br>
             Barcode: ${product.meta.barcode}<br>  
+            <button class="add-to-cart" onclick="addToCart(${product.id})" >Add to Cart</button>
             <button class="closeDetails" onclick="closeDetails()">Close</button>
+            
             </div>
         `;
 }
@@ -43,8 +45,5 @@ function Details(product) {
 //close view details
 function closeDetails() {
   prod.style.display = "flex";
-  // prod.style.gridTemplateColumns = repeat(5,auto);
-  // grid-template-columns : repeat(6,auto);
-  // prod.classList.add
   detailsContainer.innerHTML = "";
 }

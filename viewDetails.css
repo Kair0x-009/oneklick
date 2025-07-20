@@ -1,5 +1,5 @@
 .detailsContainer {
-  display: none; /* Use display: flex/block when opening via JS */
+  display: none; /*Use display: flex/block when opening via JS */
   position: fixed;
   top: 50%;
   left: 50%;
@@ -21,11 +21,11 @@
   flex-direction: column;
   line-height: 30px;
   gap: 12px;
-  background: linear-gradient(to top right, #2560a3 0%, #8133d5 100%);
+  background-color: white;
   text-align: left;
   font-family: Arial, sans-serif;
   font-size: 16px;
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 15px;
   
 }

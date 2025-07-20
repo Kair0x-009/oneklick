@@ -5,11 +5,63 @@
     <title>Document</title>
   </head>
   <style>
-    .content {
-      margin-left: 250px;
-      padding: 20px;
-      margin-top: 50px;
-    }
+.cart-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.cart-item h3 {
+  margin: 0 0 8px;
+  color: #444;
+}
+
+.cart-item p {
+  margin: 4px 0;
+  color: #666;
+}
+
+/* Buttons */
+.add-to-cart-btn {
+  margin-top: 10px;
+}
+
+.add-to-cart-btn button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  margin-right: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn button:hover {
+  background-color: #0056b3;
+}
+
+/* Empty cart message */
+#cartItems p {
+  /* text-align: center; */
+  color: #000000;
+  /* font-style: italic; */
+}
   </style>
 
   <link rel="stylesheet" href="navbar.css" />

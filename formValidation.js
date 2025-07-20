@@ -30,7 +30,6 @@ async function validate(e) {
 
     let data = await res.json();
 
-    console.log(data);
     localStorage.setItem("user", JSON.stringify(data));
 
     if (!res.ok) {
@@ -38,9 +37,6 @@ async function validate(e) {
       return false;
     }
 
-    console.log(data); // Token, user info
-
-    // alert("Sign In successful for " + signinusername);
 
     // window.location.href = "index.html";
   } catch (error) {

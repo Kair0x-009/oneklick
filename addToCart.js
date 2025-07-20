@@ -28,7 +28,7 @@ async function addToCart(productId) {
   }
 
   localStorage.setItem("cart", JSON.stringify(cart));
-  alert("Product added to cart successfully!");
+  // alert("Product added to cart successfully!");
 }
 
 function viewCart() {
@@ -47,22 +47,37 @@ function viewCart() {
     let totalPrice = item.price * item.quantity;
 
     itemElement.innerHTML = `
-
-            <div style="border: 1px solid #ccc; padding: 10px; margin: 10px; display: flex; align-items: center;">
-                <img src="${item.thumbnail}" alt="${item.title}" style="width: 60px; height: 60px; margin-right: 10px;">
+            <div class="cart-item">
+                <img src="${item.thumbnail}" alt="${item.title}">
                 <div>
-                    <h3>${item.name}</h3>
+                    <h3>${item.title}</h3>
                     <p>Quantity: ${item.quantity}</p>
                     <p>Price: Rs. ${item.price}</p>
                     <p>Total: Rs.${totalPrice} </p>
+                    <div class="add-to-cart-btn">
+                      <button class="add-to-cart">Buy Now</button>
+                      <button class="add-to-cart" onclick="removeItem(${item.id})" >Remove</button>
+                    </div>
                 </div>
-                
             </div>
-            
-
-
         `;
+
+
     cartItemsContainer.appendChild(itemElement);
   });
 }
 viewCart();
+
+  function removeItem(productId) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    for (let i = 0; i < cart.length; i++) {
+      if (cart[i].id === productId) {
+        cart.splice(i, 1);
+        break;
+      }
+    }
+  
+    localStorage.setItem("cart", JSON.stringify(cart));
+    viewCart();
+  }
+

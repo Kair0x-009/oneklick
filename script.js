@@ -11,6 +11,7 @@ async function getData() {
 getData();
 
 function displayProducts(products) {
+
   // console.log(products)
   container.innerHTML = "";
   products.products.forEach((product, index) => {
@@ -20,7 +21,9 @@ function displayProducts(products) {
     div.className = "product";
     div.innerHTML = `
     <div onclick="viewDetails(${product.id})">
+    <div class="product-image">
       <img src="${product.images[0]}" />
+      </div>
       <h3>${product.title}</h3>
        <div class="product-price">
           <span class="current-price">$${discountedPrice.toFixed(2)}</span>
@@ -30,11 +33,10 @@ function displayProducts(products) {
         <p>Stock: ${product.stock}</p>
         <p>Discount: ${product.discountPercentage}%</p>
         <div class="btn">
+        <button class="add-to-cart" onclick="addToCart(${product.id})" >Add to Cart</button>
        </div>
-      <button onclick="addToCart(${product.id})">Add to Cart</button>
-      <button id="viewDetailsButton" onclick="viewDetails(${
-        product.id
-      })">View Details</button>
+      
+      
         </div>
     `;
     container.appendChild(div);

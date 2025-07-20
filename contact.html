@@ -12,24 +12,15 @@
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="mediaQueries.css" />
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+      
 
-      /* body {
-      font-family: 'Poppins', sans-serif;
-      background: #f5f6fa;
-      color: #2f3640;
-      line-height: 1.6;
-    } */
+  
 
       .contact-container {
-        max-width: 1200px;
+        max-width:calc(100vw - 50px);
         margin: auto;
-        margin-top: 50px;
-        padding: 50px 20px;
+        /* margin-top: 50px; */
+        /* padding: 50px 20px; */
         display: flex;
         justify-content: space-between;
         gap: 40px;
@@ -38,7 +29,7 @@
       .contact-form,
       .newsletter,
       .contact-info {
-        flex: 1;
+        /* flex: 1; */
         background: #fff;
         padding: 30px;
         border-radius: 12px;
@@ -88,8 +79,21 @@
       }
 
       iframe {
-        height: 200px;
+        height: 20%;
         width: auto;
+      }
+
+   @media screen and (max-width: 768px) {
+        .contact-container{
+          flex-direction: column;
+          width: 100vw;
+        }
+
+        .contact-form,
+      .newsletter,
+      .contact-info {
+       max-width: calc(100vw - 50px);
+      }
       }
     </style>
   </head>

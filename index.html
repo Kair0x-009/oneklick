@@ -124,7 +124,7 @@
   <style>
 
      .hero {
-    background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+    background:rgb(5, 5, 224);
     color: white;
     padding:0px 100px 180px  100px;
             text-align: center;
@@ -147,12 +147,13 @@
             
             /* width: 100px;
             padding: 10px; */
-            background-color: #ffffff;
+            background-color: rgb(5, 5, 224);
     color: white;
     padding: 12px 24px;
     border-radius: 50px;
     font-weight: 600;
     transition: all 0.3s;
+    border: 2px solid rgb(255, 255, 255);
                  
         }
 
@@ -280,16 +281,33 @@ background-color: #77859c;
 
     
 
-    @keyframes bounce {
-      0%,
-      100% {
-        transform: translateY(0);
-        scale: 0.8;
-      }
-      50% {
-        transform: translateY(-10px);
-        scale: 1;
-      }
+   @media screen and (max-width: 768px) {
+  .hero{
+    padding: 0%;
+  }
+  .ourPromises {
+    flex-direction: column;
+  }
+
+  .review-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .revMessage {
+    margin-bottom: 25px;
+  }
+
+   .footerContent {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+  }
+
+  .footerContent div {
+    margin: 10px;
+  }
     }
   </style>
 </html>

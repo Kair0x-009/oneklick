@@ -29,6 +29,7 @@ select {
   transition: width 0.5s ease-in-out;
   position: fixed;
   display: flex;
+  z-index: 100;
   flex-direction: column;
   justify-content: space-between;
 
@@ -38,6 +39,7 @@ select {
 
 .container:hover {
   width: 200px;
+
 }
 
 .sidebar a {
@@ -73,6 +75,7 @@ select {
   top: 0;
   z-index: 1;
   flex-wrap: wrap;
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -121,4 +124,14 @@ a {
   padding: 5px;
   color: black;
   border-radius: 15px;
+}
+
+@media screen and (max-width: 768px) {
+.footerContent{
+flex-direction: column;
+}
+
+.social-media-links{
+  padding-top: 10px;
+}
 }
