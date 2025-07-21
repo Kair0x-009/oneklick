@@ -38,7 +38,7 @@ async function validate(e) {
     }
 
 
-    // window.location.href = "index.html";
+    window.location.href = "profilePage.html";
   } catch (error) {
     console.error("Error:", error);
     alert("An error occurred. Please try again.");
@@ -73,6 +73,6 @@ async function SignUpValidate() {
   localStorage.setItem("user", JSON.stringify(data));
   console.log(data);
   // visitProfile(data);
-  //  window.location.href = "profilePage.html";
+   window.location.href = "profilePage.html";
   return true; // Allow form submission
 }
