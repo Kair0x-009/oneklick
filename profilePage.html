@@ -35,13 +35,12 @@
   <script>
     let card = document.querySelector('.card');
     function visitProfile(){
-      // const user = "abc";
-      console.log(localStorage);
+      // console.log(localStorage);
       const user = JSON.parse(localStorage.getItem("user"));
       console.log(user);
 
       if (!user) {
-    // window.location.href = "signIn.html";
+    window.location.href = "signIn.html";
   } 
         card.innerHTML=" ";
          const div = document.createElement("div");
