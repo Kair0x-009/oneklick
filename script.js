@@ -15,8 +15,8 @@ function displayProducts(products) {
   // console.log(products)
   container.innerHTML = "";
   products.products.forEach((product, index) => {
-    const discountAmount = product.price * (product.discountPercentage / 100);
-    const discountedPrice = product.price - discountAmount;
+    let discountAmount = product.price * (product.discountPercentage / 100);
+    let discountedPrice = product.price - discountAmount;
     const div = document.createElement("div");
     div.className = "product";
     div.innerHTML = `
@@ -29,8 +29,8 @@ function displayProducts(products) {
           <span class="current-price">$${discountedPrice.toFixed(2)}</span>
           <span class="original-price">$${product.price.toFixed(2)}</span>
         </div>
-        <p>Rating: ${product.rating}</p>
-        <p>Stock: ${product.stock}</p>
+        <p id="rating">Rating:${product.rating}</p>
+        
         <p>Discount: ${product.discountPercentage}%</p>
         <div class="btn">
         <button class="add-to-cart" onclick="addToCart(${product.id})" >Add to Cart</button>
@@ -39,8 +39,9 @@ function displayProducts(products) {
       
         </div>
     `;
+    
     container.appendChild(div);
-    console.log(product.id);
+    getRating(product.rating);
   });
 }
 
@@ -149,3 +150,28 @@ sortBy.addEventListener("change", () => {
     displayProducts(products);
   }
 });
+
+
+function getRating(ratingValue) {
+  let rating = document.getElementById("rating");
+  rating.innerHTML = "Rating:"; // Clear previous rating
+  let fullStars = Math.floor(ratingValue);
+  let hasHalfStar = ratingValue % 1 !== 0;
+  let totalStars = 5;
+
+  // Add full stars
+  for (let i = 0; i < fullStars; i++) {
+    rating.innerHTML += "f";
+  }
+
+  // Add half star if needed
+  if (hasHalfStar) {
+    rating.innerHTML += "h"; // You can replace this with a half-star icon
+    fullStars++; // Count the half star toward total
+  }
+
+  // Add empty stars to reach 5 total
+  for (let i = fullStars; i < totalStars; i++) {
+    rating.innerHTML += "✩";
+  }
+}

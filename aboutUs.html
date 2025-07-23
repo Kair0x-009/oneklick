@@ -5,22 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - TrendNest</title>
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <style>
-      /* About Us Page Styles - Classic CSS */
+    .about-us-main-content{
+    
+      display: flex;
+      flex-direction: column;
+      min-height: calc( 100vh - 50px);
+      /* height: 100vh; */
+      background-color: rgba(184, 187, 201, 0.5);
+    }
 
-/* Main Content Section */
-section {
+  .about-us-main-content > .footerContent{
+      margin-top: auto;
+    }
+.about-us-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+    gap: 20px;
     padding: 20px;
-    background-color: #f9f9f9;
+   
     font: 18px;
 }
 
-section div {
-    margin-bottom: 30px;
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.about-us-section div {
+  flex: 1 1 300px; 
+  display: flex;
+  flex-direction: column; 
+  /* justify-content: space-between;  */
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 h2 {
@@ -28,7 +46,7 @@ h2 {
     font-size: 24px;
     margin-top: 0;
     padding-bottom: 10px;
-    border-bottom: 2px solid #ff8800;
+    border-bottom: 4px solid green;
 }
 
 /* List Styles */
@@ -42,23 +60,12 @@ li {
 }
 
 
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
-    section {
-        margin-left: 0;
-        padding-top: 70px; /* Account for topbar */
-    }
-    
-    .footerContent div {
-        display: block;
-        margin-bottom: 15px;
-    }
-}
+
      </style>
   </head>
   <body>
      <div class="topbar">
-      <img src="img/image-removebg-preview.png" alt="Logo" />
+      <img src="img/logo.png" alt="Logo" />
     </div>
     <div class="container">
       <div class="sidebar">
@@ -78,21 +85,22 @@ li {
         <a href="aboutUs.html"><img src="img/about-us.png" alt="" />About Us</a>
       </div>
       <footer>
-        &copy; BLANK_SPACE&trade; <br />
+        &copy; One Klick&trade; 2025.<br>
         All Rights Reserved
       </footer>
     </div>
-    <section>
+    <main class="about-us-main-content">
+    <section class="about-us-section">
       <div>
-        <h2>Welcome to BLANK_SPACE – Where Quality Meets Convenience!</h2>
+        <h2>Welcome to One Klick – Where Quality Meets Convenience!</h2>
         <p>
-          At BLANK_SPACE , we believe in making online shopping effortless, enjoyable, and accessible for everyone. Founded in [Year], our mission is to provide high-quality products, exceptional customer service, and a seamless shopping experience—all at the click of a button.
+          At One Klick , we believe in making online shopping effortless, enjoyable, and accessible for everyone. Founded in [Year], our mission is to provide high-quality products, exceptional customer service, and a seamless shopping experience—all at the click of a button.
         </p>
       </div>
       <div>
         <h2>Our Story</h2>
         <p>
-          What started as a small idea among friends has grown into a trusted eCommerce destination for thousands of customers. Frustrated by the lack of [specific problem your brand solves, e.g., "affordable yet stylish home decor" or "eco-friendly everyday essentials"], we set out to create a platform that offers [your unique value proposition]. Today, we take pride in curating a diverse selection of products that cater to your needs while keeping sustainability, affordability, and style in mind.
+          What started as a small idea among friends has grown into a trusted eCommerce destination for thousands of customers. Frustrated by the lack of affordable yet stylish home decor and eco-friendly everyday essentials, we set out to create a platform that offers [your unique value proposition]. Today, we take pride in curating a diverse selection of products that cater to your needs while keeping sustainability, affordability, and style in mind.
         </p>
       </div>
       <div>
@@ -110,13 +118,15 @@ li {
           We’re more than just a store—we’re a community of passionate shoppers and creators. Follow us on [Social Media Links] for updates, promotions, and behind-the-scenes content!
         </p>
       </div>
-      Have questions or feedback? We’d love to hear from you! [Contact Us Page Link]
-
-Thank you for choosing [Your Brand Name]—we’re thrilled to have you here!
-    </section>
+      <div >
+      Have questions or feedback? We’d love to hear from you! <a href="contact.html" style="text-decoration: underline; ">Click here</a>
+Thank you for choosing One Klick —we’re thrilled to have you here!
+    </div>
+    </section> 
+    
 <div class="footerContent">
       <div>
-        <img src="img/image-removebg-preview.png" alt="logo" />
+        <img src="img/logo.png" alt="logo" />
       </div>
 
       <div class="quick-links">
@@ -134,5 +144,6 @@ Thank you for choosing [Your Brand Name]—we’re thrilled to have you here!
         <a href=""><i class="fab fa-snapchat"></i></a>
       </div>
     </div>
+    </main>
   </body>
 </html>

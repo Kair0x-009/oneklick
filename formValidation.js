@@ -13,7 +13,6 @@ async function validate(e) {
 
   // Check if fields are filled before sending request
   if (!signinusername || !signinpassword) {
-    alert("Please fill in all fields.");
     return false;
   }
 
@@ -56,6 +55,7 @@ async function SignUpValidate() {
   let email = signupForm.querySelector("#Email").value;
   let age = signupForm.querySelector("#age").value;
   let password = signupForm.querySelector("#Password").value;
+  let address = signupForm.querySelector("#Address").value;
 
   let res = await fetch("https://dummyjson.com/users/add", {
     method: "POST",
@@ -67,6 +67,7 @@ async function SignUpValidate() {
       username: username,
       email: email,
       password: password,
+      address:address,
     }),
   });
   let data = await res.json();

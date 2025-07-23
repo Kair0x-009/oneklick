@@ -13,25 +13,31 @@
     <!-- <link rel="stylesheet" href="mediaQueries.css" /> -->
     <style>
       
-
-  
+.main-content{
+min-height: calc(100vh - 50px);
+ display: flex;
+  flex-direction: column;
+}
+  .main-content > .footerContent{
+    margin-top: auto;
+  }
 
       .contact-container {
-        max-width:calc(100vw - 55px);
+        width:calc(100vw - 55px);
         margin: auto;
-        /* margin-top: 50px; */
-        /* padding: 50px 20px; */
         display: flex;
         justify-content: space-between;
-        gap: 40px;
+        /* align-items: center; */
+        margin-bottom: auto;
+        gap: 10px;
       }
 
       .contact-form,
       .newsletter,
       .contact-info {
-        /* flex: 1; */
+        flex: 1;
         background: #fff;
-        padding: 20px;
+        padding: 10px;
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       }
@@ -39,7 +45,7 @@
       h2 {
         margin-bottom: 20px;
         font-size: 28px;
-        color: #273c75;
+        color: #000000;
       }
 
       label {
@@ -61,7 +67,7 @@
       button {
         margin: 20px 0px;
         padding: 12px 20px;
-        background-color: #40739e;
+        background-color: #4CAF50;
         color: #fff;
         border: none;
         border-radius: 8px;
@@ -71,7 +77,7 @@
       }
 
       button:hover {
-        background-color: #273c75;
+        background-color: #428629;
       }
 
       .newsletter p {
@@ -79,28 +85,24 @@
       }
 
       iframe {
-        height: 20%;
+        height: auto;
         width: auto;
       }
+
 
    @media screen and (max-width: 768px) {
         .contact-container{
           flex-direction: column;
-          width: calc(100vw - 50px)
+          width: calc(100vw - 55px)
         }
 
-        .contact-form,
-      .newsletter,
-      .contact-info {
-       max-width: calc(100vw - 50px);
-       /* padding-left: 5px; */
-      }
+      
       }
     </style>
   </head>
   <body>
-    <div class="topbar">
-      <img src="img/image-removebg-preview.png" alt="Logo" />
+  <div class="topbar">
+      <img src="img/logo.png" alt="Logo" />
     </div>
     <div class="container">
       <div class="sidebar">
@@ -114,17 +116,18 @@
           ><img src="img/contact.png" alt="Contact Icon" />Contact</a
         >
         <a href="myCart.html"><img src="img/cart.png" alt="" />Cart</a>
-        <a href="profilePage.html"
-          ><img src="img/user.png" alt="News Icon" />Profile</a
-        >
+        <a href="profilePage.html"><img src="img/user.png" alt="News Icon" />Profile</a>
         <a href="aboutUs.html"><img src="img/about-us.png" alt="" />About Us</a>
+        
       </div>
       <footer>
-        &copy; BLANK_SPACE&trade; <br />
+        &copy; One Klick&trade; 2025.<br>
         All Rights Reserved
       </footer>
     </div>
 
+
+    <main class="main-content">
     <section class="contact-container">
       <div class="contact-info">
         <h2>Let's Talk</h2>
@@ -134,14 +137,14 @@
         </p>
         <div class="info-item">
           <span>Email:</span>
-          blank.space@gmail.com
+          oneklick@gmail.com
         </div>
         <div class="info-item">
           <span>Phone:</span>
           +064 123456
         </div>
         <div class="info-item">
-          <span>Location:</span>
+          <p>Location:</p>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6127.883082972037!2d84.62440058164394!3d28.00233669150372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399522b65559e779%3A0x88c571dd36753f47!2sGorkha%20Museum!5e1!3m2!1sen!2snp!4v1752144352799!5m2!1sen!2snp"
             width="600"
@@ -190,7 +193,7 @@
     </section>
     <div class="footerContent">
       <div>
-        <img src="img/image-removebg-preview.png" alt="logo" />
+        <img src="img/logo.png" alt="logo" />
       </div>
 
       <div class="quick-links">
@@ -208,5 +211,6 @@
         <a href=""><i class="fab fa-snapchat"></i></a>
       </div>
     </div>
+    </main>
   </body>
 </html>

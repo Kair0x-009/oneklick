@@ -28,7 +28,7 @@
         <a href="aboutUs.html"><img src="img/about-us.png" alt="" />About Us</a>
       </div>
       <footer>
-        &copy; BLANK_SPACE&trade; <br />
+        &copy; One Klick&trade; 2025.<br>
         All Rights Reserved
       </footer>
     </div>
@@ -39,7 +39,7 @@
           <form
             id="SignUpForm"
             method="POST"
-            onsubmit="SignUpValidate()"
+            
           >
             <input type="text" id="FirstName" placeholder="First Name" />
             <input type="text" id="LastName" placeholder="Last Name" />
@@ -51,11 +51,12 @@
               min="16"
               max="100"
             />
+            <input type="text" id="Address" placeholder="Enter your Address">
             <input type="email" id="Email" placeholder="Email" />
             <input type="password" id="Password" placeholder="Password" />
-            <button type="submit">Sign Up</button>
+            
           </form>
-
+          <button type="button" onclick="SignUpValidate()">Sign Up</button>
           <p>Already have an account? <a href="signIn.html">Sign In</a></p>
         </div>
       </div>

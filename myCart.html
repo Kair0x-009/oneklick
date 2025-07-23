@@ -4,7 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
+    .content{
+      text-align: center;
+    }
 .cart-item {
   display: flex;
   align-items: flex-start;
@@ -58,16 +62,23 @@
 
 /* Empty cart message */
 #cartItems p {
-  /* text-align: center; */
   color: #000000;
-  /* font-style: italic; */
+}
+section{
+  min-height: calc(100vh - 50px);
+   display: flex;
+  flex-direction: column;
+}
+
+section > .footerContent{
+  margin-top: auto;
 }
   </style>
 
   <link rel="stylesheet" href="navbar.css" />
   <body>
     <div class="topbar">
-      <img src="img/image-removebg-preview.png" alt="Logo" />
+      <img src="img/logo.png" alt="Logo" />
     </div>
     <div class="container">
       <div class="sidebar">
@@ -87,15 +98,37 @@
         <a href="aboutUs.html"><img src="img/about-us.png" alt="" />About Us</a>
       </div>
       <footer>
-        &copy; BLANK_SPACE&trade; <br />
+        &copy; One Klick&trade; 2025.<br>
         All Rights Reserved
       </footer>
     </div>
 
     <section class="content">
       <h1>My Cart</h1>
+      
       <div id="cartItems"></div>
+       <div class="footerContent">
+      <div>
+        <img src="img/logo.png" alt="logo" />
+      </div>
+
+      <div class="quick-links">
+        <a href="index.html">Home</a>
+        <a href="">About Us</a>
+        <a href="">Products</a>
+        <a href="">Contacts</a>
+      </div>
+      <div class="social-media-links">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href=""><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-snapchat"></i></a>
+      </div>
+    </div>
     </section>
+   
     <script src="addToCart.js"></script>
   </body>
 </html>
