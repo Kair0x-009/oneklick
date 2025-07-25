@@ -24,7 +24,7 @@ function displayProducts(products) {
     <div class="product-image">
       <img src="${product.images[0]}" />
       </div>
-      <h3>${product.title}</h3>
+      <h3 class="product-title">${product.title}</h3>
        <div class="product-price">
           <span class="current-price">$${discountedPrice.toFixed(2)}</span>
           <span class="original-price">$${product.price.toFixed(2)}</span>
@@ -41,13 +41,12 @@ function displayProducts(products) {
     `;
     
     container.appendChild(div);
-    getRating(product.rating);
+   
   });
 }
 
 const input = document.getElementById("input");
 const btn = document.getElementById("this");
-// const search = input.value.trim();
 btn.addEventListener("click", (e) => {
   e.preventDefault();
   const search = input.value.trim();
@@ -85,9 +84,7 @@ async function getCategoryList() {
 }
 
 function displayCategory(categoryList) {
-  // selectElement.innerHTML='';
   categoryList.forEach((category) => {
-    // console.log(array.slug)
     const option = document.createElement("option");
     option.value = category;
     option.text = category.toUpperCase(); // Display text
@@ -107,11 +104,8 @@ function displayCategory(categoryList) {
 document.getElementById("container").appendChild(selectElement);
 getCategoryList();
 
-// logic for sorting data in products using bubble sort
 let sortBy = document.getElementById("mySelect");
 let sortByValue = sortBy.value;
-// console.log("hi man");
-// console.log(sortByValue);
 
 sortBy.addEventListener("change", () => {
   sortByValue = sortBy.value;
@@ -150,28 +144,3 @@ sortBy.addEventListener("change", () => {
     displayProducts(products);
   }
 });
-
-
-function getRating(ratingValue) {
-  let rating = document.getElementById("rating");
-  rating.innerHTML = "Rating:"; // Clear previous rating
-  let fullStars = Math.floor(ratingValue);
-  let hasHalfStar = ratingValue % 1 !== 0;
-  let totalStars = 5;
-
-  // Add full stars
-  for (let i = 0; i < fullStars; i++) {
-    rating.innerHTML += "f";
-  }
-
-  // Add half star if needed
-  if (hasHalfStar) {
-    rating.innerHTML += "h"; // You can replace this with a half-star icon
-    fullStars++; // Count the half star toward total
-  }
-
-  // Add empty stars to reach 5 total
-  for (let i = fullStars; i < totalStars; i++) {
-    rating.innerHTML += "✩";
-  }
-}

@@ -1,0 +1,153 @@
+
+     .hero {
+    background:rgb(5, 5, 224);
+    color: white;
+    padding:0px 100px 180px  100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        .shop-now {
+            
+        
+            background-color: rgb(5, 5, 224);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: 2px solid rgb(255, 255, 255);
+                 
+        }
+
+        .shop-now:hover {
+    background-color: #4CAF50;
+    transform: translateY(-2px);
+}
+        
+        .hero-image {
+            max-width: 800px;
+            margin: 50px auto;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+
+    div a {
+      text-decoration: none;
+      padding: 5px;
+      border-radius: 15px;
+    }
+
+   
+
+    h2 {
+      text-align: center;
+    }
+    .review-container {
+      /* width: 100%; */
+            /* max-width: 1200px; */
+            margin: 0 auto;
+            padding: 50px 20px;
+          background-color: #F1F5F9;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            
+    }
+
+    .revMessage {
+      max-width: 300px;
+    background: white;
+    border: 1px solid #E2E8F0;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .ourPromises {
+      display: flex;
+      justify-content: space-around;
+      /* margin: 50px 50px 50px 100px; */
+      padding: 50px;
+      background-color: #F8FAFC;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .promise {
+      text-align: center;
+    }
+
+    .promise img {
+      height: 50px;
+      width: auto;
+      background-color: rgb(76, 76, 201);
+      color: white;
+    padding: 15px;
+      border-radius: 50%;
+      
+    }
+   
+   .gallery-container {
+      display: flex;
+      position: relative;
+      margin-left: 50px;
+      margin-top: 50px;
+      /* width:calc(100vw - 50px); */
+      height: 80vh;
+      overflow: hidden; /* hide overflow to keep images within bounds */
+      /* background-color: aqua; */
+      align-items: center;
+      justify-content: center;
+    }
+    .content img {
+      border-radius: 20px; 
+      position: absolute; 
+      width: auto;
+      height: 55vh;
+      object-fit: cover; 
+      }
+
+
+    
+
+   @media screen and (max-width: 768px) {
+  .hero{
+    padding: 0%;
+  }
+  .ourPromises {
+    flex-direction: column;
+  }
+
+  .review-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .revMessage {
+    margin-bottom: 25px;
+  }
+
+
+
+    }

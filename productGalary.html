@@ -9,112 +9,6 @@
   <link rel="stylesheet" href="mediaQueries.css" />
   <link rel="stylesheet" href="navbar.css" />
   <link rel="stylesheet" href="viewDetails.css" />
-  <link rel="stylesheet" href="mediaQueries.css" />
-<style>
-  .filter {
-  display: flex;
-  flex-direction: row;
-  width: auto;
-  flex-wrap: wrap;
-  align-items: center;
-
-  justify-content: center;
-  align-items: center;
-  padding-right: 20px;
-  gap: 5px;
-}
-
-.SearchSortCategory {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 5px;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0px;
-  flex-direction: row;
-}
-.inputForm input[type="text"] {
-  padding: 10px 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 12px;
-  width: 150px;
-  margin-top: 5px;
-}
-
-
-
-.inputForm button {
-  padding: 5px 10px;
-  background-color: rgb(118, 177, 8);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.inputForm button:hover {
-  background-color: orangered;
-}
-#container {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-#sorting select,
-#container select {
-  padding: 8px 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 12px;
-  background-color: white;
-}
-
-.category , .sort , .search{
-   display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-@media  screen and (max-width: 468px) {
-  .search ,.category , .sort{
-   flex-direction: column;
-    font: 8px;
-    margin-bottom: 5px;
-  }
-}
-  
-@media screen and (max-width: 768px) {
-   .SearchSortCategory{
-     flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          font-size: 7px;
-  }
-
-  #sorting select,
-#container select, .inputForm input[type="text"] , .inputForm button{
-  padding: 5px;
-  font-size: 7px;
-  /* background-color: white; */
-}
-  /* .topbar{
-    position: fixed;
-    width: 100vw;
-    margin-top: 0%;
-  } */
-  
-  
-  .inputForm input[type="text"] {
-  font-size: 9px;
-  width: 100px;
-  margin-top: auto;
-}
-
-  
-}
-</style>
   <body>
     <!-- Navigation Bar-->
     <div class="topbar">
@@ -140,7 +34,7 @@
             <select id="mySelect">
               <option value="price">Price (asc)</option>
               <option value="title">Title (A-Z)</option>
-              <option value="rating">Rating (0-5)</option>
+              <option value="rating">Rating (5-0)</option>
             </select>
           </div>          
         </div>

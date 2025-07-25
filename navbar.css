@@ -3,7 +3,7 @@ body {
   margin-top: 50px;
   margin-left: 50px;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family:'Poppins', sans-serif;
   box-sizing: border-box;
   background: linear-gradient(to top right, #ffffff 0%, #ffffff 100%);
 }
@@ -57,7 +57,7 @@ select {
   background-color: rgba(255, 136, 0, 0.2);
 }
 
-.sidebar img {
+.sidebar img{
   height: 20px;
   width: 20px;
   margin-right: 25px;
