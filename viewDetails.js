@@ -1,9 +1,9 @@
 //function for viewing product details
 const detailsContainer = document.getElementById("detailsContainer");
 const prod = document.getElementById("productList");
-// Fetch product details from the API
 async function viewDetails(productId) {
   prod.style.display = "none";
+  
   try {
     let response = await fetch(`https://dummyjson.com/products/${productId}`);
     let product = await response.json();

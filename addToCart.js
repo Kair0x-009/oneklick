@@ -1,8 +1,7 @@
 async function addToCart(productId) {
   const user = JSON.parse(localStorage.getItem("user"));
   if (!user) {
-    alert("No user found. Please sign in first.");
-    window.location.href = "signIn.html";
+    window.location.href = "signUp.html";
   }
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   const existingProductIndex = cart.findIndex((item) => item.id === productId);

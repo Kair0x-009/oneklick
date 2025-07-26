@@ -5,20 +5,26 @@
       console.log(user);
 
       if (!user) {
-    window.location.href = "signIn.html";
+    window.location.href = "signUp.html";
   } 
         card.innerHTML=" ";
          const div = document.createElement("div");
     div.className = "content";
-    const age = parseInt(user.age);
-    console.log(age);
+    // const age = parseInt(user.age);
+    console.log(user.age);
+
+const age = localStorage.getItem("age");
+const address = localStorage.getItem("address");
+
+
+
     div.innerHTML = `
    <img src=" ${user.image}" alt"proile image" class="profile-img" loading="lazy"/>
       <h2> ${user.firstName} ${user.lastName} </h2>
       <h4>${user.username}</h4>
       <h4>
         Age: ${age}<br>
-        Address: ${user.address}<br>
+        Address: ${address}<br>
         Gmail: ${user.email}</h4>
       <p>Creating beautiful digital experiences</p>
 
