@@ -18,7 +18,7 @@ async function viewDetails(productId) {
 function Details(product) {
   detailsContainer.innerHTML = `
            <div class="product-Details">
-            <img src="${product.images[0]}" alt="${product.title}" />
+            <img src="${product.images[0]}" alt="${product.title}" loading="lazy" />
             <h3><strong>${product.title}</strong></h3>
             Price:  $${product.price.toFixed(2)}<br>
             Rating: ${product.rating}<br>
@@ -34,10 +34,11 @@ function Details(product) {
             <img src="${product.meta.qrCode}" alt="${product.title}" />
             Created At: ${product.meta.updatedAt}<br>
             Updated At: ${product.meta.createdAt}<br>
-            Barcode: ${product.meta.barcode}<br>  
+            Barcode: ${product.meta.barcode}<br> 
+            <div class="view-detail-btn"> 
             <button class="add-to-cart" onclick="addToCart(${product.id})" >Add to Cart</button>
             <button class="closeDetails" onclick="closeDetails()">Close</button>
-            
+            </div>
             </div>
         `;
 }
@@ -47,3 +48,4 @@ function closeDetails() {
   prod.style.display = "flex";
   detailsContainer.innerHTML = "";
 }
+

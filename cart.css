@@ -31,7 +31,6 @@
   color: #666;
 }
 
-/* Buttons */
 .add-to-cart-btn {
   margin-top: 10px;
 }
@@ -52,7 +51,6 @@
   background-color: #0056b3;
 }
 
-/* Empty cart message */
 #cartItems p {
   color: #000000;
 }

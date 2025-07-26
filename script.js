@@ -22,7 +22,7 @@ function displayProducts(products) {
     div.innerHTML = `
     <div onclick="viewDetails(${product.id})">
     <div class="product-image">
-      <img src="${product.images[0]}" />
+      <img src="${product.images[0]}" alt="${product.title}" loading="lazy" />
       </div>
       <h3 class="product-title">${product.title}</h3>
        <div class="product-price">

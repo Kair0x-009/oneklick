@@ -1,17 +1,9 @@
 /* Modal Overlay Container */
 .detailsContainer {
-  display: none; /* Will be toggled by JS */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: none;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.8); /* Transparent black overlay */
-  max-width: 90vw;
-  max-height: 90vh;
-  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
   overflow-y: auto;
-  border-radius: 15px;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
 }
 
@@ -40,7 +32,7 @@
 }
 
 /* Product Image */
-.product-Details img {
+.product-Details img{
   max-width: 180px;
   height: auto;
   border-radius: 10px;
@@ -50,20 +42,28 @@
 
 /* QR Image (Second Image) */
 .product-Details img:last-of-type {
-  margin-top: 15px;
+  /* margin-top: 15px; */
   max-width: 120px;
 }
 
-/* Close Button */
+.view-detail-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  gap: 50px;
+}
+
+
 .product-Details button.closeDetails {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   align-self: center;
   padding: 10px 20px;
   background-color: #e53935;
   color: #fff;
   border: none;
   border-radius: 8px;
-  cursor: pointer;
+  width: 125px;
   font-size: 16px;
   transition: background-color 0.3s ease;
 }
@@ -71,40 +71,19 @@
 .product-Details button.closeDetails:hover {
   background-color: #c62828;
 }
+.product-Details .add-to-cart:hover {
+  background-color: #0056b3;
+}
 
-/* Add to Cart Button */
 .product-Details .add-to-cart {
-  margin-top: 10px;
-  align-self: center;
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 8px;
-  cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
-}
-
-.product-Details .add-to-cart:hover {
-  background-color: #0056b3;
-}
-
-/* Strong Text */
-.product-Details strong {
-  color: #000;
-}
-
-/* Scrollbar for modal content */
-.detailsContainer::-webkit-scrollbar {
-  width: 8px;
-}
-.detailsContainer::-webkit-scrollbar-thumb {
-  background-color: #ccc;
-  border-radius: 4px;
-}
-.detailsContainer::-webkit-scrollbar-track {
-  background: transparent;
+  width: 125px;
 }
 
 @media (max-width: 600px) {

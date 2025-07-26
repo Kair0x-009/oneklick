@@ -10,12 +10,14 @@
         card.innerHTML=" ";
          const div = document.createElement("div");
     div.className = "content";
+    const age = parseInt(user.age);
+    console.log(age);
     div.innerHTML = `
-   <img src=" ${user.image}" alt"proile image" class="profile-img" />
+   <img src=" ${user.image}" alt"proile image" class="profile-img" loading="lazy"/>
       <h2> ${user.firstName} ${user.lastName} </h2>
       <h4>${user.username}</h4>
       <h4>
-        Age: ${user.age}<br>
+        Age: ${age}<br>
         Address: ${user.address}<br>
         Gmail: ${user.email}</h4>
       <p>Creating beautiful digital experiences</p>
@@ -26,6 +28,7 @@
 
       </div>
     `;
+    console.log(user.age);
     card.appendChild(div);
     }
     setTimeout(visitProfile(), 2000);
